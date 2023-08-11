@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fajar Nursodiq</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Fajar Nursodiq' Tracker</h1>
+      </header>
+
+      <div class="card">
+        <div class="card-header text-center">
+          Balance:
+          <span id="balanceAmount">Rp 0</span>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header text-center">
+          <h3>Transaksi Baru</h3>
+        </div>
+        <div class="card-body">
+          <form id="transactionForm">
+            <div class="mb-3">
+              <label for="transactionType">Jenis Transaksi:</label>
+              <select class="form-select" id="transactionType" required>
+                <option value="income">Pemasukan</option>
+                <option value="expense">Pengeluaran</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="transactionDescription">Deskripsi Transaksi:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="transactionDescription"
+                placeholder="Enter transaction description..."
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="transactionText">Jumlah Transaksi:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="transactionText"
+                placeholder="Enter transaction amount..."
+                required
+              />
+            </div>
+            <div class="d-grid gap-3">
+              <button type="submit" class="d-grid gap-2 btn btn-primary">
+                Tambah
+              </button>
+              <button id="clearLocalStorageButton" class="btn btn-danger">
+                Delete Data
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header text-center">
+          <h3>Daftar Transaksi</h3>
+        </div>
+        <div class="card-body">
+          <ul id="transactionList" class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+          </ul>
+        </div>
+        <div
+          id="noTransactionMessage"
+          class="card w-75 my-5 mx-auto alert alert-warning"
+        >
+          <div class="card-body">Tidak ada transaksi yang dicatat.</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
