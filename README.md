@@ -18,6 +18,6 @@ This application provides a simple backend service to manage users and their res
 
 ![table](2.png)
 
-![table](1.png)
+![table](3.png)
 
-![table](6.png)
+![table](1.png)
